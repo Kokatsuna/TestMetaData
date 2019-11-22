@@ -10,6 +10,6 @@ echo "##teamcity[testMetadata testName='testName' key='video mp4 testName' type=
 echo "##teamcity[testMetadata key='video mp4 no testName' type='video' value='data/login.mp4']"
 echo "##teamcity[testFinished name='testName2']"
 echo "##teamcity[testStarted name='testName3']"
-echo "##teamcity[testMetadata key='circle' type='image' value='data/circle.svg']"
+echo "##teamcity[testMetadata key='circle' type='image' value='data/atom.svg']"
 echo "##teamcity[testFinished name='testName3']"
 echo "##teamcity[testSuiteFinished name='My Suite']"
