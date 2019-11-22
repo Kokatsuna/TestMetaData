@@ -3,8 +3,6 @@
    alert(1)
  </script>
  <g onload="javascript:alert(2)"></g>
- <animation xlink:href="javascript:alert(3)"/>
- <foreignObject xlink:href="javascript:alert(4)"/>
  <set attributeName="onmouseover" to="alert(5)"/> 
  <handler xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load">alert(6)</handler>
  <g fill="none">
