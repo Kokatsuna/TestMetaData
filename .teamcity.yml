@@ -1,40 +1,20 @@
-name: TestMetaData
 jobs:
   Job1:
-    name: Job 1
-    steps:
-      - type: script
-        script-content: echo 'Hello!'
-    runs-on: Linux-Medium
-    dependencies:
-      - Job2
-  Job2:
-    name: Job 2
-    runs-on: Linux-Medium
-    steps:
-      - type: script
-        script-content: echo 'Hello! %asdasd% %example%'
-        working-directory: ''
-    dependencies:
-      - Job3
-  Job3:
-    name: Job 3
-    runs-on: Linux-Medium
-    steps:
-      - type: script
-        script-content: echo 'Hello! %a'
-  Job4:
-    name: Job 4
-    runs-on:
-      self-hosted:
-        - arch: aarch64
+    name: Job 11
     steps:
       - type: script
         script-content: echo 'hello'
-parameters:
-  example: primer
-  asdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdasasdasdsasdasdasdas: asdasd
-  dfhdfhdfh: dfhdfhdfh
-  asdf123: '123123'
-secrets:
-  asdf: credentialsJSON:946cd508-5fe1-4265-8799-54a789a635e8
+  mixedTests:
+    name: Job 22
+    dependencies:
+      - Job1
+    steps:
+      - type: script
+        script-content: echo 'hello'
+  CUSTOM_NAME:
+    name: Job 33
+    dependencies:
+      - Job2
+    steps:
+      - type: script
+        script-content: echo 'hello'
